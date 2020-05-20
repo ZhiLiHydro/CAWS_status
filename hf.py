@@ -18,7 +18,7 @@ stationName = ['Lake Michigan at Chicago Lock',
         'Chicago River at Chicago Lock', 
         'Chicago River at Columbus Dr', 
         'Chicago River at Grand Ave', 
-        'CSSC at Western Ave',
+        'Chicago Sanitary and Ship Canal (CSSC) at Western Ave',
         'CSSC at Stickney, IL',
         'CSSC near Lemont, IL',
         'Little Calumet River at South Holland, IL',
@@ -40,7 +40,7 @@ plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bb
 plt.ylabel('Gage height in feet (Chicago City Datum)')
 plt.title('Updated at ' + datetime.now().strftime('%m/%d/%Y %H:%M:%S') + ' US Central Time')
 plt.tight_layout()
-plt.savefig('./gauge-IL.png', dpi=200)
+plt.savefig('./gauge-IL.png', dpi=150)
 plt.close()
 
 
@@ -62,6 +62,6 @@ plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bb
 plt.ylabel('Gage height in feet (Chicago City Datum)')
 plt.title('Updated at ' + datetime.now().strftime('%m/%d/%Y %H:%M:%S') + ' US Central Time')
 plt.tight_layout()
-plt.savefig('./gauge-IN.png', dpi=200)
+plt.savefig('./gauge-IN.png', dpi=150)
 plt.close()
 
