@@ -1,6 +1,8 @@
 # Chicago Area Waterway System status (daily update)
 
-![gaugeheight](https://github.com/ZhiLiHydro/CAWS_status/blob/master/gauge.png)
+![gaugeheightIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/gauge-IL.png)
 
-#### Note: Data retrieval is done by the [HydroFunctions project](https://github.com/mroberge/hydrofunctions)
+![gaugeheightIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/gauge-IN.png)
+
+#### Note: Data retrieval is done by the [HydroFunctions](https://github.com/mroberge/hydrofunctions) project
 
