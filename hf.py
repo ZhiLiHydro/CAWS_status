@@ -30,7 +30,7 @@ df['CSSC near Lemont, IL'] -= 27.431
 df['Little Calumet River at South Holland, IL'] -= 4.48
 df['CSSC at Romeoville, IL'] -= 27.431
 df.to_csv('gauge-IL-dataframe.csv', float_format='%.2f', na_rep='nan')
-ax = df.plot(linewidth=.5, marker='o', markersize=.5, figsize=(8,7))
+ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,.99,len(stationNum))))
 ax.grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
 plt.ylabel('Gage height in feet (Chicago City Datum)')
@@ -53,7 +53,7 @@ df['Grand Calumet River at Hohman Ave at Hammond, IN'] -= 4.48
 df['Indiana Harbor Canal at East Chicago, IN'] -= 9.28
 df['Grand Calumet River at Industrial Hwy at Gary, IN'] += 0.55
 df.to_csv('gauge-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
-ax = df.plot(linewidth=.5, marker='o', markersize=.5, figsize=(8,7))
+ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,.99,len(stationNum))))
 ax.grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
 plt.ylabel('Gage height in feet (Chicago City Datum)')
@@ -74,7 +74,7 @@ df = hf.NWIS(stationNum, 'iv', period='P7D', parameterCd='00060').get_data().df(
 for n in stationNum:
     df.rename(columns={'USGS:' + n + ':00060:00000': stationName[stationNum.index(n)]}, inplace=True)
 df.to_csv('discharge-IL-dataframe.csv', float_format='%.2f', na_rep='nan')
-ax = df.plot(linewidth=.5, marker='o', markersize=.5, figsize=(8,7))
+ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,.99,len(stationNum))))
 ax.grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
 plt.ylabel('Discharge in cubic feet per second')
@@ -97,7 +97,7 @@ df['Grand Calumet River at Hohman Ave at Hammond, IN'] -= 4.48
 df['Indiana Harbor Canal at East Chicago, IN'] -= 9.28
 df['Grand Calumet River at Industrial Hwy at Gary, IN'] += 0.459
 df.to_csv('discharge-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
-ax = df.plot(linewidth=.5, marker='o', markersize=.5, figsize=(8,7))
+ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,.99,len(stationNum))))
 ax.grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
 plt.ylabel('Discharge in cubic feet per second')
