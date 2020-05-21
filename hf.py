@@ -25,10 +25,11 @@ stationName = ['Lake Michigan at Chicago Lock',
         'CSSC at Romeoville, IL']
 df = hf.NWIS(stationNum, 'iv', period='P7D', parameterCd='00065').get_data().df()
 for n in stationNum:
-    df.rename(columns={'USGS:' + n + ':00065:00000': stationName[stationNum.index(n)]}, inplace=True)
-df['CSSC near Lemont, IL'] -= 27.431
-df['Little Calumet River at South Holland, IL'] -= 4.48
-df['CSSC at Romeoville, IL'] -= 27.431
+    df.rename(columns={'USGS:' + n + ':00065:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
+    if stationName[stationNum.index(n)] == 'CSSC near Lemont, IL' or stationName[stationNum.index(n)] == 'CSSC at Romeoville, IL':
+        df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 27.431
+    if stationName[stationNum.index(n)] == 'Little Calumet River at South Holland, IL':
+        df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 4.48
 df.to_csv('gauge-IL-dataframe.csv', float_format='%.2f', na_rep='nan')
 ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,.99,len(stationNum))))
 ax.grid(color='grey', linestyle=':')
@@ -48,10 +49,13 @@ stationName = ['Grand Calumet River at Hohman Ave at Hammond, IN',
         'Grand Calumet River at Industrial Hwy at Gary, IN']
 df = hf.NWIS(stationNum, 'iv', period='P7D', parameterCd='00065').get_data().df()
 for n in stationNum:
-    df.rename(columns={'USGS:' + n + ':00065:00000': stationName[stationNum.index(n)]}, inplace=True)
-df['Grand Calumet River at Hohman Ave at Hammond, IN'] -= 4.48
-df['Indiana Harbor Canal at East Chicago, IN'] -= 9.28
-df['Grand Calumet River at Industrial Hwy at Gary, IN'] += 0.55
+    df.rename(columns={'USGS:' + n + ':00065:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
+    if stationName[stationNum.index(n)] == 'Grand Calumet River at Hohman Ave at Hammond, IN':
+        df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 4.48
+    if stationName[stationNum.index(n)] == 'Indiana Harbor Canal at East Chicago, IN':
+        df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 9.28
+    if stationName[stationNum.index(n)] == 'Grand Calumet River at Industrial Hwy at Gary, IN':
+        df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] += 0.55
 df.to_csv('gauge-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
 ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,.99,len(stationNum))))
 ax.grid(color='grey', linestyle=':')
@@ -72,7 +76,7 @@ stationName = ['CSSC near Lemont, IL',
         'Des Plaines River at Route 53 at Joliet, IL']
 df = hf.NWIS(stationNum, 'iv', period='P7D', parameterCd='00060').get_data().df()
 for n in stationNum:
-    df.rename(columns={'USGS:' + n + ':00060:00000': stationName[stationNum.index(n)]}, inplace=True)
+    df.rename(columns={'USGS:' + n + ':00060:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
 df.to_csv('discharge-IL-dataframe.csv', float_format='%.2f', na_rep='nan')
 ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,.99,len(stationNum))))
 ax.grid(color='grey', linestyle=':')
@@ -92,10 +96,7 @@ stationName = ['Grand Calumet River at Hohman Ave at Hammond, IN',
         'Grand Calumet River at Industrial Hwy at Gary, IN']
 df = hf.NWIS(stationNum, 'iv', period='P7D', parameterCd='00060').get_data().df()
 for n in stationNum:
-    df.rename(columns={'USGS:' + n + ':00060:00000': stationName[stationNum.index(n)]}, inplace=True)
-df['Grand Calumet River at Hohman Ave at Hammond, IN'] -= 4.48
-df['Indiana Harbor Canal at East Chicago, IN'] -= 9.28
-df['Grand Calumet River at Industrial Hwy at Gary, IN'] += 0.459
+    df.rename(columns={'USGS:' + n + ':00060:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
 df.to_csv('discharge-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
 ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,.99,len(stationNum))))
 ax.grid(color='grey', linestyle=':')

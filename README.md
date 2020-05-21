@@ -12,11 +12,11 @@
 
 ## 2. Discharge
 
-### 1.1 Illinois
+### 2.1 Illinois
 
 ![dischargeIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/discharge-IL.png)
 
-### 1.2 Indiana
+### 2.2 Indiana
 
 ![dischargeIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/discharge-IN.png)
 
