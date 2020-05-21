@@ -12,6 +12,7 @@ stationNum = ['04087440',
         '05536137',
         '05536140', 
         '05536890',
+        '05536290',
         '05536995']
 stationName = ['Lake Michigan at Chicago Lock', 
         'Chicago River at Chicago Lock', 
@@ -20,6 +21,7 @@ stationName = ['Lake Michigan at Chicago Lock',
         'Chicago Sanitary and Ship Canal (CSSC) at Western Ave',
         'CSSC at Stickney, IL',
         'CSSC near Lemont, IL',
+        'Little Calumet River at South Holland, IL',
         'CSSC at Romeoville, IL']
 df = hf.NWIS(stationNum, 'iv', period='P7D', parameterCd='00065').get_data().df()
 for n in stationNum:
@@ -29,6 +31,7 @@ for n in stationNum:
     if stationName[stationNum.index(n)] == 'Little Calumet River at South Holland, IL':
         df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 4.48
 df.to_csv('gauge-IL-dataframe.csv', float_format='%.2f', na_rep='nan')
+color = plt.cm.Dark2(np.linspace(0,1,len(stationNum)))
 ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,1,len(stationNum))))
 ax.grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
