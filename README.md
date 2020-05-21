@@ -1,6 +1,6 @@
 # Chicago Area Waterway System status (auto daily update)
 
-## 1. Gage height
+## 1. Gauge height
 
 ### 1.1 Illinois
 
