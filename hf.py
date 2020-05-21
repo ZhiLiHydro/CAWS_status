@@ -31,8 +31,8 @@ for n in stationNum:
     if stationName[stationNum.index(n)] == 'Little Calumet River at South Holland, IL':
         df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 4.48
 df.to_csv('gauge-IL-dataframe.csv', float_format='%.2f', na_rep='nan')
-color = plt.cm.Dark2(np.linspace(0,1,len(stationNum)))
-ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,1,len(stationNum))))
+color = np.append(plt.cm.Dark2(np.linspace(0, 1, 8)), [[0, 0, 0, 1]], axis=0)
+ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=color)
 ax.grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
 plt.ylabel('Gage height in feet (Chicago City Datum)')

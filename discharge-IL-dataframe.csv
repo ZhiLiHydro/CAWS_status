@@ -1,10 +1,4 @@
 ,"USGS 05536890: CSSC near Lemont, IL",USGS:05536890:00060:00000_qualifiers,"USGS 05533600: Des Plaines River near Lemont, IL",USGS:05533600:00060:00000_qualifiers,"USGS 05536290: Little Calumet River at South Holland, IL",USGS:05536290:00060:00000_qualifiers,"USGS 05537980: Des Plaines River at Route 53 at Joliet, IL",USGS:05537980:00060:00000_qualifiers
-2020-05-14 09:24:00-06:00,5770.00,P,nan,nan,nan,nan,nan,nan
-2020-05-14 09:25:00-06:00,5820.00,P,nan,nan,nan,nan,nan,nan
-2020-05-14 09:26:00-06:00,5870.00,P,nan,nan,nan,nan,nan,nan
-2020-05-14 09:27:00-06:00,5920.00,P,nan,nan,nan,nan,nan,nan
-2020-05-14 09:28:00-06:00,5980.00,P,nan,nan,nan,nan,nan,nan
-2020-05-14 09:29:00-06:00,6030.00,P,nan,nan,nan,nan,nan,nan
 2020-05-14 09:30:00-06:00,6090.00,P,922.00,P,113.00,P,5380.00,P
 2020-05-14 09:31:00-06:00,6130.00,P,nan,nan,nan,nan,nan,nan
 2020-05-14 09:32:00-06:00,6170.00,P,nan,nan,nan,nan,nan,nan
@@ -10046,4 +10040,5 @@
 2020-05-21 08:48:00-06:00,5890.00,P,nan,nan,nan,nan,nan,nan
 2020-05-21 08:49:00-06:00,5880.00,P,nan,nan,nan,nan,nan,nan
 2020-05-21 08:50:00-06:00,5930.00,P,nan,nan,nan,nan,13900.00,P
-2020-05-21 09:00:00-06:00,nan,nan,6290.00,P,nan,nan,nan,nan
+2020-05-21 09:00:00-06:00,nan,nan,6290.00,P,nan,nan,14100.00,P
+2020-05-21 09:10:00-06:00,nan,nan,nan,nan,nan,nan,14900.00,P
