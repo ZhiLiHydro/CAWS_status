@@ -24,7 +24,8 @@ stationName = ['Lake Michigan at Chicago Lock',
         'Little Calumet River at South Holland, IL',
         'CSSC at Romeoville, IL']
 df = hf.NWIS(stationNum, 'iv', period='P7D', parameterCd='00065').get_data().df()
-for n in stationNum:
+for i, n in enumerate(stationNum):
+    df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
     df.rename(columns={'USGS:' + n + ':00065:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
     if stationName[stationNum.index(n)] == 'CSSC near Lemont, IL' or stationName[stationNum.index(n)] == 'CSSC at Romeoville, IL':
         df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 27.431
@@ -49,7 +50,8 @@ stationName = ['Grand Calumet River at Hohman Ave at Hammond, IN',
         'Indiana Harbor Canal at East Chicago, IN',
         'Grand Calumet River at Industrial Hwy at Gary, IN']
 df = hf.NWIS(stationNum, 'iv', period='P7D', parameterCd='00065').get_data().df()
-for n in stationNum:
+for i, n in enumerate(stationNum):
+    df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
     df.rename(columns={'USGS:' + n + ':00065:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
     if stationName[stationNum.index(n)] == 'Grand Calumet River at Hohman Ave at Hammond, IN':
         df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 4.48
@@ -70,13 +72,15 @@ plt.close()
 
 
 
-stationNum = ['05536890', '05536290', '05533600', '05537980']
+stationNum = ['05536890', '05536290', '05533600', '05537980', '05536085']
 stationName = ['CSSC near Lemont, IL',
         'Little Calumet River at South Holland, IL',
         'Des Plaines River near Lemont, IL',
-        'Des Plaines River at Route 53 at Joliet, IL']
+        'Des Plaines River at Route 53 at Joliet, IL',
+        'North Branch Chicago River at N Pulaski Rd']
 df = hf.NWIS(stationNum, 'iv', period='P7D', parameterCd='00060').get_data().df()
-for n in stationNum:
+for i, n in enumerate(stationNum):
+    df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
     df.rename(columns={'USGS:' + n + ':00060:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
 df.to_csv('discharge-IL-dataframe.csv', float_format='%.2f', na_rep='nan')
 ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,.99,len(stationNum))))
@@ -96,7 +100,8 @@ stationName = ['Grand Calumet River at Hohman Ave at Hammond, IN',
         'Indiana Harbor Canal at East Chicago, IN',
         'Grand Calumet River at Industrial Hwy at Gary, IN']
 df = hf.NWIS(stationNum, 'iv', period='P7D', parameterCd='00060').get_data().df()
-for n in stationNum:
+for i, n in enumerate(stationNum):
+    df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
     df.rename(columns={'USGS:' + n + ':00060:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
 df.to_csv('discharge-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
 ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), color=plt.cm.Dark2(np.linspace(0,.99,len(stationNum))))
