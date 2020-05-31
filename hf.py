@@ -72,8 +72,8 @@ plt.close()
 
 
 
-stationNum = ['05536890', '05536290', '05533600', '05537980', '05536085']
-stationName = ['CSSC near Lemont, IL',
+stationNum = ['05536290', '05533600', '05537980', '05536085']#, '05536890']
+stationName = [#'CSSC near Lemont, IL',
         'Little Calumet River at South Holland, IL',
         'Des Plaines River near Lemont, IL',
         'Des Plaines River at Route 53 at Joliet, IL',
