@@ -1,6 +1,6 @@
 # Chicago Area Waterway System status (auto daily update)
 
-## 1. Gauge height
+## 1. Gage heights
 
 ### 1.1 Illinois
 
@@ -10,7 +10,7 @@
 
 ![gaugeheightIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/gauge-IN.png)
 
-## 2. Discharge
+## 2. Discharges
 
 ### 2.1 Illinois
 
