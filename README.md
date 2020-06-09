@@ -20,5 +20,5 @@
 
 ![dischargeIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/discharge-IN.png)
 
-#### Credit: The [HydroFunctions](https://github.com/mroberge/hydrofunctions) project is applied to retrieve USGS Water Services data
+#### Credit: The [HydroFunctions](https://github.com/mroberge/hydrofunctions) project is applied to retrieve USGS Water Data
 
