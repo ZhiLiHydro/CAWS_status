@@ -72,7 +72,7 @@ plt.close()
 
 
 
-stationNum = [#'05536890', ## <-- somehow discharge data missing since May 22, 2020
+stationNum = ['05536890',
         '05536290', 
         '05533600', 
         '05537980', 
@@ -80,7 +80,7 @@ stationNum = [#'05536890', ## <-- somehow discharge data missing since May 22, 2
         '05536580',
         '05536500',
         '05536340']
-stationName = [#'CSSC near Lemont, IL', 
+stationName = ['CSSC near Lemont, IL', 
         'Little Calumet River at South Holland, IL',
         'Des Plaines River near Lemont, IL',
         'Des Plaines River at Route 53 at Joliet, IL',
