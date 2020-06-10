@@ -92,6 +92,7 @@ df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00060').get_data().df
 for i, n in enumerate(stationNum):
     df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
     df.rename(columns={'USGS:' + n + ':00060:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
+df[df < 0] = np.nan
 df.to_csv('discharge-IL-dataframe.csv', float_format='%.2f', na_rep='nan')
 ax = df.plot(linewidth=.75, marker='o', markersize=.75, figsize=(8,7), logy=True)
 ax.grid(color='grey', linestyle=':')
