@@ -2,7 +2,9 @@
 
 ## 0. Map of station locations
 
-<iframe src="https://www.google.com/maps/d/embed?mid=1SZREv8sLH-2QZTxpYXC1ILf0a1-GgQw9" width="640" height="480"></iframe>
+<div class="iframe_container">
+  <iframe src="https://www.google.com/maps/d/embed?mid=1SZREv8sLH-2QZTxpYXC1ILf0a1-GgQw9" width="640" height="480"> </iframe>
+</div>
 
 ## 1. Gage height
 
