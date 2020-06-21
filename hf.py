@@ -23,7 +23,7 @@ stationName = ['Lake Michigan at Chicago Lock', ## 1
         'CSSC near Lemont, IL',                 ## 7
         'Little Calumet River at South Holland, IL', ## 8
         'CSSC at Romeoville, IL']               ## 9
-df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00065').get_data().df()
+df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00065').df()
 for i, n in enumerate(stationNum):
     df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
     df.rename(columns={'USGS:' + n + ':00065:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
@@ -49,7 +49,7 @@ stationNum = ['05536357', '04092750', '04092677']
 stationName = ['Grand Calumet River at Hohman Ave at Hammond, IN', 
         'Indiana Harbor Canal at East Chicago, IN',
         'Grand Calumet River at Industrial Hwy at Gary, IN']
-df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00065').get_data().df()
+df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00065').df()
 for i, n in enumerate(stationNum):
     df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
     df.rename(columns={'USGS:' + n + ':00065:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
@@ -88,7 +88,7 @@ stationName = ['CSSC near Lemont, IL',
         'Stony Creek (west) near Worth, IL',
         'Tinley Creek near Palos Park, IL',
         'Midlothian Creek at Oak Forest, IL']
-df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00060').get_data().df()
+df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00060').df()
 for i, n in enumerate(stationNum):
     df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
     df.rename(columns={'USGS:' + n + ':00060:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
@@ -110,7 +110,7 @@ stationNum = ['05536357', '04092750', '04092677']
 stationName = ['Grand Calumet River at Hohman Ave at Hammond, IN',
         'Indiana Harbor Canal at East Chicago, IN',
         'Grand Calumet River at Industrial Hwy at Gary, IN']
-df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00060').get_data().df()
+df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00060').df()
 for i, n in enumerate(stationNum):
     df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
     df.rename(columns={'USGS:' + n + ':00060:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
