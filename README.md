@@ -1,20 +1,21 @@
-# Chicago Area Waterway System status (auto daily update)
+# [Chicago Area Waterway System](https://mwrd.org/chicago-area-waterway-system) (CAWS) status
+#(auto daily update)
 
 ## 0. Map of station locations
 
-<div class="iframe_container">
-  <iframe src="https://www.google.com/maps/d/embed?mid=1SZREv8sLH-2QZTxpYXC1ILf0a1-GgQw9" width="640" height="480"> </iframe>
-</div>
+Check station locations on this map
+
+https://www.google.com/maps/d/embed?mid=1SZREv8sLH-2QZTxpYXC1ILf0a1-GgQw9
 
 ## 1. Gage height
 
 ### 1.1 Illinois
 
-![gaugeheightIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/gauge-IL.png)
+![gageheightIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/gageHeight-IL.png)
 
 ### 1.2 Indiana
 
-![gaugeheightIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/gauge-IN.png)
+![gageheightIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/gageHeight-IN.png)
 
 ## 2. Discharge
 
@@ -26,7 +27,7 @@
 
 ![dischargeIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/discharge-IN.png)
 
-#### Credit: The [HydroFunctions](https://github.com/mroberge/hydrofunctions) project is applied to retrieve USGS Water Data
+#### Credit: The [HydroFunctions](https://github.com/mroberge/hydrofunctions) project is applied to get water data from USGS NWIS
 
 
 
