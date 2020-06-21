@@ -1,6 +1,6 @@
 # [Chicago Area Waterway System](https://mwrd.org/chicago-area-waterway-system) (CAWS) status
 
-#(auto daily update)
+# (auto daily update)
 
 ## 0. Map of station locations
 
