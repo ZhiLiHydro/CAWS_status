@@ -1,5 +1,5 @@
 # coding: utf-8
-import os
+import pathlib
 from datetime import datetime
 import hydrofunctions as hf
 import numpy as np
@@ -35,8 +35,7 @@ for i, n in enumerate(stationNum):
     if 'Little Calumet' in stationName[stationNum.index(n)]:
         df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 4.48
 df.to_csv('gageHeight-IL-dataframe.csv', float_format='%.2f', na_rep='nan')
-color = np.append(plt.cm.Dark2(np.linspace(0, 1, 8)), [[0, 0, 0, 1]], axis=0)
-df.plot(linewidth=.75, marker='+', markersize=.75, figsize=(8,7)).grid(color='grey', linestyle=':')
+df.plot(linewidth=.75, marker='.', markersize=1, figsize=(8,7)).grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
 plt.ylabel('Gage height, feet (Chicago City Datum)')
 plt.title('Updated at ' + datetime.now().strftime('%m/%d/%Y %H:%M:%S') + ' US Central Time')
@@ -62,7 +61,7 @@ for i, n in enumerate(stationNum):
     if 'Gary' in stationName[stationNum.index(n)]:
         df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] += 0.55
 df.to_csv('gageHeight-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
-df.plot(linewidth=.75, marker='+', markersize=.75, figsize=(8,5.5)).grid(color='grey', linestyle=':')
+df.plot(linewidth=.75, marker='.', markersize=1, figsize=(8,5.5)).grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
 plt.ylabel('Gage height, feet (Chicago City Datum)')
 plt.title('Updated at ' + datetime.now().strftime('%m/%d/%Y %H:%M:%S') + ' US Central Time')
@@ -95,7 +94,7 @@ for i, n in enumerate(stationNum):
     df.rename(columns={'USGS:' + n + ':00060:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
 df[df < 0] = np.nan
 df.to_csv('discharge-IL-dataframe.csv', float_format='%.2f', na_rep='nan')
-df.plot(linewidth=.75, marker='+', markersize=.75, figsize=(8,7), logy=True).grid(color='grey', linestyle=':')
+df.plot(linewidth=.75, marker='.', markersize=1, figsize=(8,7), logy=True).grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
 plt.ylabel('Discharge, cubic feet per second')
 plt.title('Updated at ' + datetime.now().strftime('%m/%d/%Y %H:%M:%S') + ' US Central Time')
@@ -118,7 +117,7 @@ df.to_csv('discharge-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
 df.plot(y=['USGS 04092750: Indiana Harbor Canal at East Chicago, IN',
            'USGS 04092677: Grand Calumet River at Industrial Hwy at Gary, IN',
            'USGS 05536357: Grand Calumet River at Hohman Ave at Hammond, IN'],
-        linewidth=.75, marker='+', markersize=.75, figsize=(8,5.5)).grid(color='grey', linestyle=':')
+        linewidth=.75, marker='.', markersize=1, figsize=(8,5.5)).grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
 plt.ylabel('Discharge, cubic feet per second')
 plt.title('Updated at ' + datetime.now().strftime('%m/%d/%Y %H:%M:%S') + ' US Central Time')
@@ -126,4 +125,4 @@ plt.tight_layout()
 plt.savefig('discharge-IN.png', dpi=150)
 plt.close()
 
-os.remove('hydrofunctions_testing.log')
+
