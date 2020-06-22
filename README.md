@@ -2,9 +2,9 @@
 
 ## 0. Map of stations
 
-[![](https://github.com/ZhiLiHydro/CAWS_status/blob/master/map.jpg))](https://www.google.com/maps/d/embed?mid=1SZREv8sLH-2QZTxpYXC1ILf0a1-GgQw9)
+[![](https://github.com/ZhiLiHydro/CAWS_status/blob/master/map.jpg)](https://www.google.com/maps/d/embed?mid=1SZREv8sLH-2QZTxpYXC1ILf0a1-GgQw9)
 
-Click this static map to for the interactive map on Google Maps
+:arrow_up: **Click this static map for the interactive map on Google Maps** :arrow_up:
 
 ## 1. Gage height
 
@@ -26,7 +26,7 @@ Click this static map to for the interactive map on Google Maps
 
 ![dischargeIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/discharge-IN.png)
 
-#### Credit: The [HydroFunctions](https://github.com/mroberge/hydrofunctions) project is applied to get water data from USGS NWIS
+**Credit: The [HydroFunctions](https://github.com/mroberge/hydrofunctions) project is applied to get water data from USGS NWIS**
 
 
 
