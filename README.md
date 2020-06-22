@@ -1,8 +1,10 @@
 # [Chicago Area Waterway System](https://mwrd.org/chicago-area-waterway-system) status (auto daily update)
 
-## 0. Map of station locations
+## 0. Map of stations
 
-https://www.google.com/maps/d/embed?mid=1SZREv8sLH-2QZTxpYXC1ILf0a1-GgQw9
+[![](https://github.com/ZhiLiHydro/CAWS_status/blob/master/map.jpg))](https://www.google.com/maps/d/embed?mid=1SZREv8sLH-2QZTxpYXC1ILf0a1-GgQw9)
+
+Click this static map to for the interactive map on Google Maps
 
 ## 1. Gage height
 

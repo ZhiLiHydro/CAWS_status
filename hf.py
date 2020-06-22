@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 
-plt.rcParams['font.family'] = 'Times New Roman'
+plt.rcParams['font.family'] = 'Times'
 
 stationNum = ['04087440', ## 1
         '05536121',       ## 2
