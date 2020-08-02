@@ -5,6 +5,7 @@ import hydrofunctions as hf
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
+from scipy.signal import savgol_filter
 
 plt.rcParams['font.family'] = 'Times New Roman'
 
@@ -113,11 +114,14 @@ df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00060').df()
 for i, n in enumerate(stationNum):
     df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
     df.rename(columns={'USGS:' + n + ':00060:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
+df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour mean)'] = savgol_filter(df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN'], 25, 1, mode='nearest')
 df.to_csv('discharge-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
 df.plot(y=['USGS 04092750: Indiana Harbor Canal at East Chicago, IN',
+           'USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour mean)',
            'USGS 04092677: Grand Calumet River at Industrial Hwy at Gary, IN',
            'USGS 05536357: Grand Calumet River at Hohman Ave at Hammond, IN'],
-        linewidth=.75, marker='.', markersize=1, figsize=(8,5.5)).grid(color='grey', linestyle=':')
+        linewidth=.75, marker='.', markersize=1, figsize=(8,6),
+        color=['lightgrey', 'tab:blue', 'tab:orange', 'tab:red']).grid(color='grey', linestyle=':')
 plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
 plt.ylabel('Discharge, cubic feet per second')
 plt.title('Updated at ' + datetime.now().strftime('%m/%d/%Y %H:%M:%S') + ' US Central Time')
