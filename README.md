@@ -10,21 +10,21 @@
 
 ### 1.1 Illinois
 
-![gageheightIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/gageHeight-IL.png)
+![gageheightIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/img/gageHeight-IL.png)
 
 ### 1.2 Indiana
 
-![gageheightIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/gageHeight-IN.png)
+![gageheightIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/img/gageHeight-IN.png)
 
 ## 2. Discharge
 
 ### 2.1 Illinois
 
-![dischargeIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/discharge-IL.png)
+![dischargeIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/img/discharge-IL.png)
 
 ### 2.2 Indiana
 
-![dischargeIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/discharge-IN.png)
+![dischargeIN](https://github.com/ZhiLiHydro/CAWS_status/blob/master/img/discharge-IN.png)
 
 **Credit: The [HydroFunctions](https://github.com/mroberge/hydrofunctions) project is applied to get water data from USGS NWIS**
 
