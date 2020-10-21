@@ -1,4 +1,5 @@
-# [Chicago Area Waterway System](https://mwrd.org/chicago-area-waterway-system) status (auto daily update)
+# Chicago Area Waterway System status
+# :alarm_clock: Automatically updates (daily)
 
 ## 0. Map of stations
 
