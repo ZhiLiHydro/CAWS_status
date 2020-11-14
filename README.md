@@ -11,6 +11,8 @@
 
 ### 1.1 Illinois
 
+WARNING: 04087440 Lake Michigan at Chicago Lock has been not functioning since Oct 5th, 2020
+
 ![gageheightIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/img/gageHeight-IL.png)
 
 ### 1.2 Indiana

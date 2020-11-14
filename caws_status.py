@@ -7,7 +7,7 @@ import hydrofunctions as hf
 
 
 def gageHeightIL():
-    stationNum = ['04087440',
+    stationNum = [#'04087440',
             '05536121',
             '05536123',
             '05536118',
@@ -16,7 +16,7 @@ def gageHeightIL():
             '05536890',
             '05536290',
             '05536995']
-    stationName = ['Lake Michigan at Chicago Lock',
+    stationName = [#'Lake Michigan at Chicago Lock',
             'Chicago River at Chicago Lock',
             'Chicago River at Columbus Dr',
             'Chicago River at Grand Ave',
