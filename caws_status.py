@@ -65,7 +65,7 @@ def gageHeightIN():
                'USGS 04092677: Grand Calumet River at Industrial Hwy at Gary, IN',
                'USGS 05536357: Grand Calumet River at Columbia Ave at Hammond, IN'],
             linewidth=.75, marker='.', markersize=1, figsize=(8,6),
-            color=['lightgrey', 'tab:blue', 'tab:orange', 'tab:red']).grid(color='grey', linestyle=':')
+            color=['lightgrey', 'tab:blue', 'tab:red']).grid(color='grey', linestyle=':')
     plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
     plt.ylabel('Gage height, feet (Chicago City Datum)')
     plt.title('Updated ' + datetime.now().strftime('%m/%d/%Y %H:%M:%S') + ' US Central Time')
@@ -107,9 +107,8 @@ def dischargeIL():
 
 
 def dischargeIN():
-    stationNum = ['05536356', '04092750', '04092677']
-    stationName = ['Grand Calumet River at Columbia Ave at Hammond, IN',
-            'Indiana Harbor Canal at East Chicago, IN',
+    stationNum = ['04092750', '04092677']
+    stationName = ['Indiana Harbor Canal at East Chicago, IN',
             'Grand Calumet River at Industrial Hwy at Gary, IN']
     df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00060').df()
     for i, n in enumerate(stationNum):
@@ -119,10 +118,9 @@ def dischargeIN():
     df.to_csv('./csv/discharge-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
     df.plot(y=['USGS 04092750: Indiana Harbor Canal at East Chicago, IN',
                'USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)',
-               'USGS 04092677: Grand Calumet River at Industrial Hwy at Gary, IN',
-               'USGS 05536357: Grand Calumet River at Columbia Ave at Hammond, IN'],
+               'USGS 04092677: Grand Calumet River at Industrial Hwy at Gary, IN'],
             linewidth=.75, marker='.', markersize=1, figsize=(8,6),
-            color=['lightgrey', 'tab:blue', 'tab:orange', 'tab:red']).grid(color='grey', linestyle=':')
+            color=['lightgrey', 'tab:blue', 'tab:red']).grid(color='grey', linestyle=':')
     plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
     plt.ylabel('Discharge, cubic feet per second')
     plt.title('Updated ' + datetime.now().strftime('%m/%d/%Y %H:%M:%S') + ' US Central Time')
@@ -136,5 +134,5 @@ if __name__ == '__main__':
     gageHeightIL()
 #    gageHeightIN()
     dischargeIL()
-#    dischargeIN()
+    dischargeIN()
 
