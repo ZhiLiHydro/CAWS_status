@@ -58,14 +58,14 @@ def gageHeightIN():
             df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 9.28
         if 'Gary' in stationName[stationNum.index(n)]:
             df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] += 0.55
-    df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)'] = savgol_filter(df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN'], 73, 1, mode='nearest')
+    df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)'] = savgol_filter(df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN'], 73, 1, mode='constant')
     df.to_csv('./csv/gageHeight-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
     df.plot(y=['USGS 04092750: Indiana Harbor Canal at East Chicago, IN',
                'USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)',
                'USGS 04092677: Grand Calumet River at Industrial Hwy at Gary, IN',
-               'USGS 05536357: Grand Calumet River at Columbia Ave at Hammond, IN'],
+               'USGS 05536356: Grand Calumet River at Columbia Ave at Hammond, IN'],
             linewidth=.75, marker='.', markersize=1, figsize=(8,6),
-            color=['lightgrey', 'tab:blue', 'tab:red']).grid(color='grey', linestyle=':')
+            color=['lightgrey', 'tab:blue', 'tab:orange', 'tab:red']).grid(color='grey', linestyle=':')
     plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
     plt.ylabel('Gage height, feet (Chicago City Datum)')
     plt.title('Updated ' + datetime.now().strftime('%m/%d/%Y %H:%M:%S') + ' US Central Time')
@@ -114,7 +114,7 @@ def dischargeIN():
     for i, n in enumerate(stationNum):
         df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
         df.rename(columns={'USGS:' + n + ':00060:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
-    df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)'] = savgol_filter(df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN'], 73, 1, mode='nearest')
+    df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)'] = savgol_filter(df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN'], 73, 1, mode='constant')
     df.to_csv('./csv/discharge-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
     df.plot(y=['USGS 04092750: Indiana Harbor Canal at East Chicago, IN',
                'USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)',
@@ -132,7 +132,7 @@ def dischargeIN():
 if __name__ == '__main__':
     plt.rcParams['font.family'] = 'Times New Roman'
     gageHeightIL()
-#    gageHeightIN()
+    gageHeightIN()
     dischargeIL()
     dischargeIN()
 
