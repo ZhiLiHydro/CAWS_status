@@ -53,12 +53,12 @@ def gageHeightIN():
         df.drop(df.columns[2*(len(stationNum)-i)-1], axis=1, inplace=True)
         df.rename(columns={'USGS:' + n + ':00065:00000': 'USGS ' + n + ': ' + stationName[stationNum.index(n)]}, inplace=True)
         if 'Hammond' in stationName[stationNum.index(n)]:
-            df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 4.48
+            df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 5.13
         if 'Indiana Harbor' in stationName[stationNum.index(n)]:
             df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] -= 9.28
         if 'Gary' in stationName[stationNum.index(n)]:
             df['USGS ' + n + ': ' + stationName[stationNum.index(n)]] += 0.55
-    df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)'] = savgol_filter(df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN'], 73, 1, mode='constant')
+    df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)'] = savgol_filter(df['USGS 04092750: Indiana Harbor Canal at East Chicago, IN'], 73, 1, mode='nearest')
     df.to_csv('./csv/gageHeight-IN-dataframe.csv', float_format='%.2f', na_rep='nan')
     df.plot(y=['USGS 04092750: Indiana Harbor Canal at East Chicago, IN',
                'USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)',
