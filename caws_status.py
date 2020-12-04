@@ -44,8 +44,8 @@ def gageHeightIL():
 
 
 def gageHeightIN():
-    stationNum = ['05536357', '04092750', '04092677']
-    stationName = ['Grand Calumet River at Hohman Ave at Hammond, IN', 
+    stationNum = ['05536356', '04092750', '04092677']
+    stationName = ['Grand Calumet River at Columbia Ave at Hammond, IN', 
             'Indiana Harbor Canal at East Chicago, IN',
             'Grand Calumet River at Industrial Hwy at Gary, IN']
     df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00065').df()
@@ -63,7 +63,7 @@ def gageHeightIN():
     df.plot(y=['USGS 04092750: Indiana Harbor Canal at East Chicago, IN',
                'USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)',
                'USGS 04092677: Grand Calumet River at Industrial Hwy at Gary, IN',
-               'USGS 05536357: Grand Calumet River at Hohman Ave at Hammond, IN'],
+               'USGS 05536357: Grand Calumet River at Columbia Ave at Hammond, IN'],
             linewidth=.75, marker='.', markersize=1, figsize=(8,6),
             color=['lightgrey', 'tab:blue', 'tab:orange', 'tab:red']).grid(color='grey', linestyle=':')
     plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
@@ -107,8 +107,8 @@ def dischargeIL():
 
 
 def dischargeIN():
-    stationNum = ['05536357', '04092750', '04092677']
-    stationName = ['Grand Calumet River at Hohman Ave at Hammond, IN',
+    stationNum = ['05536356', '04092750', '04092677']
+    stationName = ['Grand Calumet River at Columbia Ave at Hammond, IN',
             'Indiana Harbor Canal at East Chicago, IN',
             'Grand Calumet River at Industrial Hwy at Gary, IN']
     df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00060').df()
@@ -120,7 +120,7 @@ def dischargeIN():
     df.plot(y=['USGS 04092750: Indiana Harbor Canal at East Chicago, IN',
                'USGS 04092750: Indiana Harbor Canal at East Chicago, IN (6-hour Mean)',
                'USGS 04092677: Grand Calumet River at Industrial Hwy at Gary, IN',
-               'USGS 05536357: Grand Calumet River at Hohman Ave at Hammond, IN'],
+               'USGS 05536357: Grand Calumet River at Columbia Ave at Hammond, IN'],
             linewidth=.75, marker='.', markersize=1, figsize=(8,6),
             color=['lightgrey', 'tab:blue', 'tab:orange', 'tab:red']).grid(color='grey', linestyle=':')
     plt.legend(edgecolor='black', facecolor='white', framealpha=1, markerscale=8, bbox_to_anchor=(.5,-.2), loc='upper center')
@@ -134,7 +134,7 @@ def dischargeIN():
 if __name__ == '__main__':
     plt.rcParams['font.family'] = 'Times New Roman'
     gageHeightIL()
-    gageHeightIN()
+#    gageHeightIN()
     dischargeIL()
-    dischargeIN()
+#    dischargeIN()
 
