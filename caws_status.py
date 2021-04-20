@@ -7,23 +7,23 @@ import hydrofunctions as hf
 
 
 def gageHeightIL():
-    stationNum = [#'04087440',
+    stationNum = ['04087440',
             '05536121',
             '05536123',
             '05536118',
             '05536137',
             '05536140',
             '05536890',
-            '05536290',
+            #'05536290',
             '05536995']
-    stationName = [#'Lake Michigan at Chicago Lock',
+    stationName = ['Lake Michigan at Chicago Lock',
             'Chicago River at Chicago Lock',
             'Chicago River at Columbus Dr',
             'Chicago River at Grand Ave',
             'Chicago Sanitary and Ship Canal (CSSC) at Western Ave',
             'CSSC at Stickney, IL',
             'CSSC near Lemont, IL',
-            'Little Calumet River at South Holland, IL',
+            #'Little Calumet River at South Holland, IL',
             'CSSC at Romeoville, IL']
     df = hf.NWIS(stationNum, 'iv', period='P14D', parameterCd='00065').df()
     for i, n in enumerate(stationNum):
