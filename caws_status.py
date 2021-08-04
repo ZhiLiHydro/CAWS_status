@@ -130,7 +130,7 @@ def dischargeIN():
 
 
 if __name__ == '__main__':
-    plt.rcParams['font.family'] = 'Times New Roman'
+##    plt.rcParams['font.family'] = 'Times New Roman'
     gageHeightIL()
     gageHeightIN()
     dischargeIL()
