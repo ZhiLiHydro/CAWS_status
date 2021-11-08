@@ -11,9 +11,9 @@
 
 ### 1.1 Illinois
 
-#### ~~WARNING: 04087440 Lake Michigan at Chicago Lock not functioning since Oct 5th, 2020~~ :::: back online in April 2021
+#### ~~WARNING: 04087440 Lake Michigan at Chicago Lock not functioning~~ :::: back functioning in Apr 2021
 
-#### WARNING: 05536995 CSSC at Romeoville, IL not functioning
+#### ~~WARNING: 05536995 CSSC at Romeoville not functioning~~ :::: back functioning in Nov 2021
 
 ![gageheightIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/img/gageHeight-IL.png)
 
