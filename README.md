@@ -11,8 +11,6 @@
 
 ### 1.1 Illinois
 
-#### WARNING: 05536995 CSSC at Romeoville not functioning
-
 ![gageheightIL](https://github.com/ZhiLiHydro/CAWS_status/blob/master/img/gageHeight-IL.png)
 
 ### 1.2 Indiana
